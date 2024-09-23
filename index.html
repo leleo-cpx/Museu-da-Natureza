@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museu da Natureza Oline</title>
+  <script>
+    function translatePage(lang) {
+        const url = window.location.href;
+        const translateUrl = `https://translate.google.com/translate?hl=${lang}&sl=pt&u=${encodeURIComponent(url)}`;
+        window.location.href = translateUrl;
+    }
+</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/q7Chfxjn/Fav-Museu-da-natureza.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <!--Nav bar início-->
+  <div class="cabecalho">
+    <ul class="nav nav-underline">
+      <img src="https://i.postimg.cc/MGkPJdzJ/NavLogo2.png" height="40rem">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Início</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Espécies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Biblioteca</a>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Traduzir
+          </button>
+          <ul class="dropdown-menu">
+            <li><button onclick="translatePage('en')">Inglês</button>
+              <button onclick="translatePage('es')">Espanhol</button>
+              <button onclick="translatePage('fr')">Francês</button></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!--Corpo do site-->
+  <div class="corpo">
+    <div class="destaque-verde" id="boasvindas">
+      <h1><b>Museu da Natureza</b></h1>
+    </div>
+    <p class="sub-texto">"Explore um mundo onde a majestade das grandes árvores se encontra com a riqueza da
+      biodiversidade. Nosso museu é um espaço único dedicado à celebração e preservação da natureza, convidando você a
+      se conectar com as maravilhas do nosso planeta"</p>
+      
+      <div class="accordion" id="knowmore">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Conheça mais
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#knowmore">
+            <div class="accordion-body">
+              <div>
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <h3 class="destaque-verde">Nossas Atrações</h3>
+                    <p class="sub-texto"><b>Exposições Interativas:</b> Descubra a história fascinante das árvores que moldaram
+                      civilizações e ecossistemas ao longo dos séculos.</p>
+                    <p class="sub-texto"><b>Caminhada das Raízes</b> Caminhe entre as copas das árvores em nosso percurso elevado
+                      e experimente a natureza de uma forma inédita.</p>
+                    <p class="sub-texto"><b>Jardim Sensorial:</b> Toque, cheire e ouça a natureza em um espaço projetado para
+                      estimular todos os seus sentidos.</p>
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <h3 class="destaque-verde">Eventos e Atividades</h3>
+                    <p class="sub-texto">Participe de oficinas educativas, palestras inspiradoras e eventos especiais que promovem
+                      a consciência
+                      ambiental e a conservação das florestas. Confira nosso calendário de eventos e não perca a oportunidade de
+                      aprender com especialistas e apaixonados pela natureza.</p>
+                  </div>
+                </div>
+          
+                <div class="row">
+                  <div class="col-sm-5 col-md-6">
+                    <h3 class="destaque-verde">Visite-nos</h3>
+                    <p class="sub-texto">Estamos localizados em um parque exuberante, perfeito para um dia em família ou uma
+                      visita contemplativa. Venha vivenciar a beleza das grandes árvores e descobrir como você pode contribuir
+                      para a preservação do nosso meio ambiente.</p>
+                  </div>
+                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <h3 class="destaque-verde">Fique Conectado</h3>
+                    <p class="sub-texto">Siga-nos nas redes sociais para atualizações, dicas de visitação e notícias sobre o mundo
+                      da natureza. Inscreva-se em nossa newsletter e seja o primeiro a saber sobre nossas novidades!</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    <br>
+
+    </div><br><br>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">O que é?</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <p>
+                O Museu da Natureza é um espaço encantador dedicado à celebração da biodiversidade e à preservação das
+                árvores majestosas que embelezam nosso planeta. Situado em um extenso parque rodeado por bosques
+                exuberantes, o museu oferece uma experiência imersiva que conecta os visitantes com a riqueza do mundo
+                natural.
+                <br><br>
+                Ao entrar, os visitantes são recebidos por uma impressionante instalação de árvores centenárias,
+                cuidadosamente transplantadas e preservadas em um ambiente que recria seu habitat original. Cada árvore
+                é acompanhada de painéis interativos que contam sua história, desde suas origens até o impacto que têm
+                em seu ecossistema.
+                <br><br>
+                As exposições do museu variam desde artefatos históricos que mostram como as árvores foram fundamentais
+                para o desenvolvimento das civilizações até mostras de arte contemporânea inspiradas na natureza.
+                Através de oficinas educativas e palestras, o museu também promove a conscientização sobre a importância
+                da conservação das florestas.
+                <br><br>
+                Uma das principais atrações é a "Caminhada das Raízes", um percurso elevado que permite aos visitantes
+                caminhar entre as copas das árvores, oferecendo uma perspectiva única e deslumbrante. Além disso, um
+                jardim sensorial convida todos a tocar, cheirar e ouvir os sons da natureza, estimulando os sentidos e
+                promovendo uma conexão profunda com o meio ambiente.
+                <br><br>
+                Com o slogan "O Museu das Grandes Árvores", o Museu da Natureza é mais do que um espaço expositivo; é um
+                refúgio de aprendizado e inspiração, onde todos podem descobrir a magnificência e a fragilidade do nosso
+                planeta, um tronco de cada vez.
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Entendido!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  </div>
+
+  <footer class="pagefooter">
+    <div class="container">
+      <h6 class="text-center legenda">&copy;2024 Museu da Natureza</h6>
+    </div>
+  </footer>
+
+  <!--Scrips JS-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
