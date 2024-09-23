@@ -7,11 +7,11 @@
   <title>Museu da Natureza Oline</title>
   <script>
     function translatePage(lang) {
-        const url = window.location.href;
-        const translateUrl = `https://translate.google.com/translate?hl=${lang}&sl=pt&u=${encodeURIComponent(url)}`;
-        window.location.href = translateUrl;
+      const url = window.location.href;
+      const translateUrl = `https://translate.google.com/translate?hl=${lang}&sl=pt&u=${encodeURIComponent(url)}`;
+      window.location.href = translateUrl;
     }
-</script>
+  </script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="bootstrap.css">
   <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/q7Chfxjn/Fav-Museu-da-natureza.png">
@@ -33,19 +33,18 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Biblioteca</a>
       </li>
-      <li class="nav-item">
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Traduzir
-          </button>
-          <ul class="dropdown-menu">
-            <li><button onclick="translatePage('en')">Inglês</button>
-              <button onclick="translatePage('es')">Espanhol</button>
-              <button onclick="translatePage('fr')">Francês</button></li>
-          </ul>
-        </div>
-      </li>
+      <!-- Traduzir bt -->
+      <button type="button" class="btn btn-outline-primary float-end" data-bs-toggle="modal" data-bs-target="#traduzir">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate"
+          viewBox="0 0 16 16">
+          <path
+            d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z" />
+          <path
+            d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31" />
+        </svg>
+      </button>
     </ul>
+
   </div>
 
   <!--Corpo do site-->
@@ -56,55 +55,64 @@
     <p class="sub-texto">"Explore um mundo onde a majestade das grandes árvores se encontra com a riqueza da
       biodiversidade. Nosso museu é um espaço único dedicado à celebração e preservação da natureza, convidando você a
       se conectar com as maravilhas do nosso planeta"</p>
-      
-      <div class="accordion" id="knowmore">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Conheça mais
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#knowmore">
-            <div class="accordion-body">
-              <div>
-                <div class="row">
-                  <div class="col-sm-5 col-md-6">
-                    <h3 class="destaque-verde">Nossas Atrações</h3>
-                    <p class="sub-texto"><b>Exposições Interativas:</b> Descubra a história fascinante das árvores que moldaram
-                      civilizações e ecossistemas ao longo dos séculos.</p>
-                    <p class="sub-texto"><b>Caminhada das Raízes</b> Caminhe entre as copas das árvores em nosso percurso elevado
-                      e experimente a natureza de uma forma inédita.</p>
-                    <p class="sub-texto"><b>Jardim Sensorial:</b> Toque, cheire e ouça a natureza em um espaço projetado para
-                      estimular todos os seus sentidos.</p>
-                  </div>
-                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-                    <h3 class="destaque-verde">Eventos e Atividades</h3>
-                    <p class="sub-texto">Participe de oficinas educativas, palestras inspiradoras e eventos especiais que promovem
-                      a consciência
-                      ambiental e a conservação das florestas. Confira nosso calendário de eventos e não perca a oportunidade de
-                      aprender com especialistas e apaixonados pela natureza.</p>
-                  </div>
+
+    <div class="accordion" id="knowmore">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Conheça mais
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#knowmore">
+          <div class="accordion-body">
+            <div>
+              <div class="row">
+                <div class="col-sm-5 col-md-6">
+                  <h3 class="destaque-verde">Nossas Atrações</h3>
+                  <p class="sub-texto"><b>Exposições Interativas:</b> Descubra a história fascinante das árvores que
+                    moldaram
+                    civilizações e ecossistemas ao longo dos séculos.</p>
+                  <p class="sub-texto"><b>Caminhada das Raízes</b> Caminhe entre as copas das árvores em nosso percurso
+                    elevado
+                    e experimente a natureza de uma forma inédita.</p>
+                  <p class="sub-texto"><b>Jardim Sensorial:</b> Toque, cheire e ouça a natureza em um espaço projetado
+                    para
+                    estimular todos os seus sentidos.</p>
                 </div>
-          
-                <div class="row">
-                  <div class="col-sm-5 col-md-6">
-                    <h3 class="destaque-verde">Visite-nos</h3>
-                    <p class="sub-texto">Estamos localizados em um parque exuberante, perfeito para um dia em família ou uma
-                      visita contemplativa. Venha vivenciar a beleza das grandes árvores e descobrir como você pode contribuir
-                      para a preservação do nosso meio ambiente.</p>
-                  </div>
-                  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-                    <h3 class="destaque-verde">Fique Conectado</h3>
-                    <p class="sub-texto">Siga-nos nas redes sociais para atualizações, dicas de visitação e notícias sobre o mundo
-                      da natureza. Inscreva-se em nossa newsletter e seja o primeiro a saber sobre nossas novidades!</p>
-                  </div>
+                <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                  <h3 class="destaque-verde">Eventos e Atividades</h3>
+                  <p class="sub-texto">Participe de oficinas educativas, palestras inspiradoras e eventos especiais que
+                    promovem
+                    a consciência
+                    ambiental e a conservação das florestas. Confira nosso calendário de eventos e não perca a
+                    oportunidade de
+                    aprender com especialistas e apaixonados pela natureza.</p>
                 </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-5 col-md-6">
+                  <h3 class="destaque-verde">Visite-nos</h3>
+                  <p class="sub-texto">Estamos localizados em um parque exuberante, perfeito para um dia em família ou
+                    uma
+                    visita contemplativa. Venha vivenciar a beleza das grandes árvores e descobrir como você pode
+                    contribuir
+                    para a preservação do nosso meio ambiente.</p>
+                </div>
+                <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                  <h3 class="destaque-verde">Fique Conectado</h3>
+                  <p class="sub-texto">Siga-nos nas redes sociais para atualizações, dicas de visitação e notícias sobre
+                    o mundo
+                    da natureza. Inscreva-se em nossa newsletter e seja o primeiro a saber sobre nossas novidades!</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-       
+
       </div>
-    <br>
+      <br>
 
     </div><br><br>
     <!-- Modal -->
@@ -151,16 +159,45 @@
         </div>
       </div>
     </div>
-    
-  </div>
 
   </div>
 
-  <footer class="pagefooter">
-    <div class="container">
-      <h6 class="text-center legenda">&copy;2024 Museu da Natureza</h6>
-    </div>
+  <footer class="pagefooter"></footer>
+  <div class="container">
+    <h6 class="text-center legenda">&copy;2024 Museu da Natureza</h6>
+  </div>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="traduzir" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Traduzir esta página</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <a class="btn btn-outline-primary" onclick="translatePage('en')"><img
+              src="https://i.postimg.cc/V6Fyx0WQ/usa-flag.png" alt="usa-flag" width="25px"> English</a><br>
+          <hr>
+          <a class="btn btn-outline-primary" onclick="translatePage('es')"><img
+              src="https://i.postimg.cc/cHWykBYB/es-flag.png" alt="usa-flag" width="25px"> Espanõl</a><br>
+          <hr>
+          <a class="btn btn-outline-primary" onclick="translatePage('fr')"><img
+              src="https://i.postimg.cc/FH2Q34Hq/fr-flag.png" alt="usa-flag" width="25px"> Français</a><br>
+          <hr>
+          <a class="btn btn-outline-primary" onclick="translatePage('pt')"><img
+              src="https://i.postimg.cc/SKCbGvXK/br-flag.png" alt="usa-flag" width="25px"> Português</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <!--Scrips JS-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
